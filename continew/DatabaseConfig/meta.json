@@ -1,0 +1,64 @@
+{
+  "groupId": "backend",
+  "artifactId": "DatabaseConfig",
+  "configs": [
+    {
+      "version": "1.0.0",
+      "files": [
+        {
+          "filePath": "/src/main/resources/config",
+          "description": "数据库配置文件模板",
+          "filename": "application.yml.ftl",
+          "inputVariables": [
+            {
+              "variableName": "dbType",
+              "variableType": "String",
+              "variableComment": "数据库类型，例如mysql、postgresql",
+              "example": "mysql"
+            },
+            {
+              "variableName": "dbUrl",
+              "variableType": "String",
+              "variableComment": "数据库连接地址",
+              "example": "jdbc:mysql://localhost:3306/mydb"
+            },
+            {
+              "variableName": "dbUsername",
+              "variableType": "String",
+              "variableComment": "数据库用户名",
+              "example": "root"
+            },
+            {
+              "variableName": "dbPassword",
+              "variableType": "String",
+              "variableComment": "数据库密码",
+              "example": "password"
+            },
+            {
+              "variableName":"progectName",
+              "variableType": "String",
+              "variableComment": "项目名称",
+              "example": "myproject"
+            }
+          ],
+          "sha256": "待计算"
+        },
+        {
+          "filePath": "/src/main/resources/config",
+          "description": "Maven依赖片段(复制到pom文件里)",
+          "filename": "pom-dependencies.ftl",
+          "inputVariables": [
+            {
+              "variableName": "dbType",
+              "variableType": "String",
+              "variableComment": "数据库类型，例如mysql、postgresql",
+              "example": "mysql"
+            }
+          ],
+          "sha256": "待计算"
+        }
+      ]
+    }
+  ]
+
+}
